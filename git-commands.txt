@@ -1,0 +1,357 @@
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project
+$ git init
+Initialized empty Git repository in C:/Users/lenovo/Documents/git project/.git/
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ cd ^C
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/lenovo/Documents/git project/.git/
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git remote add orgin https://github.com/Mikasawarrior/GitExample.git
+bash: $'\302\226\302\226git': command not found
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git remote add origin https://github.com/Mikasawarrior/GitExample.git
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git remote add origin https://github.com/Mikasawarrior/GitExample.git
+error: remote origin already exists.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first Document.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git add first Document.txt
+fatal: pathspec 'first' did not match any files
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first-file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git add first-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git commit -m first commit
+error: pathspec 'commit' did not match any file(s) known to git
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git commnit first-file.txt -m first commin
+git: 'commnit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git commit first-file.txt -m first commin
+error: pathspec 'commin' did not match any file(s) known to git
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git commit -m "First Commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'lenovo@DESKTOP-6089QG1.(none)')
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ ^C
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git commit
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'lenovo@DESKTOP-6089QG1.(none)')
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git config --global user.email "sharankumarp02@gmail.com"
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git config --global user.name "Sharankumar"
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git commit -m "First Commit"
+[master (root-commit) bfc728d] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first-file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        second-file.txt
+        third-file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git add -A
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   first-file.txt
+        new file:   second-file.txt
+        new file:   third-file.txt
+
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git commit -a -m "Change commit"
+[master 2622f74] Change commit
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 second-file.txt
+ create mode 100644 third-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git log
+commit 2622f748b6e4077de5c4df049fdf39ba32fcc86c (HEAD -> master)
+Author: Sharankumar <sharankumarp02@gmail.com>
+Date:   Sun Aug 27 18:40:23 2023 +0530
+
+    Change commit
+
+commit bfc728d30a0da8efd40cf5cf5bc64e7017525cdc
+Author: Sharankumar <sharankumarp02@gmail.com>
+Date:   Sun Aug 27 18:35:32 2023 +0530
+
+    First Commit
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git push -u orgin master
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ $ git push -u orgin master
+Please make sure you have the correct access rights
+and the repository exists.
+
+bash: $: command not found
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ fatal: 'orgin' does not appear to be a git repository
+bash: fatal:: command not found
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ fatal: Could not read from remote repository.
+bash: fatal:: command not found
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ Please make sure you have the correct access rights
+bash: Please: command not found
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ and the repository exists.
+bash: and: command not found
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git push -u orgin master
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (8/8), 579 bytes | 41.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Mikasawarrior/GitExample.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git branch firstbranch
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ git add fourth-file
+fatal: pathspec 'fourth-file' did not match any files
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ git add fourth-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ git commit -m "Changes in first branch"
+[firstbranch 3860137] Changes in first branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourth-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ ls
+first-file.txt  fourth-file.txt  second-file.txt  third-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ ls
+first-file.txt  second-file.txt  third-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ ls
+first-file.txt  fourth-file.txt  second-file.txt  third-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ git checkout master\
+> ;
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ get merge firstbranch
+bash: get: command not found
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git merge firstbranch
+Updating 2622f74..3860137
+Fast-forward
+ fourth-file.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourth-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ ls
+first-file.txt  fourth-file.txt  second-file.txt  third-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ ls
+first-file.txt  fourth-file.txt  second-file.txt  third-file.txt
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ cat fourth-file.txt
+Tejasri vagu
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+M       fourth-file.txt
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ cat fourth-file
+cat: fourth-file: No such file or directory
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ cat fourth-file.txt
+Tejasri vagu
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git push -u orgin master
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 287 bytes | 9.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Mikasawarrior/GitExample.git
+   2622f74..3860137  master -> master
+branch 'master' set up to track 'origin/master'.
+
+lenovo@DESKTOP-6089QG1 MINGW64 ~/Documents/git project (master)
+$
